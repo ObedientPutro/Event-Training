@@ -28,6 +28,7 @@ public class SessionDetail {
     @Column(columnDefinition = "TEXT")
     private String description;
 
+
     // Table Relation
     @ManyToOne
     @JoinColumn(name = "session_id", nullable = false)

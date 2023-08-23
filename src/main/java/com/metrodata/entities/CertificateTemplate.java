@@ -19,6 +19,7 @@ public class CertificateTemplate {
     @Column(name = "certificate_url", columnDefinition = "TEXT", nullable = false)
     private String certificateUrl;
 
+
     // Table Relation
     @OneToOne
     @MapsId

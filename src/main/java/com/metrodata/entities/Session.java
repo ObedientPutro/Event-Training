@@ -42,8 +42,9 @@ public class Session {
     @Enumerated(EnumType.STRING)
     private SessionType type;
 
+
     // Table Relation
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "event_id", nullable = false)
     private Event event;
 

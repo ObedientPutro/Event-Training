@@ -1,8 +1,8 @@
 package com.metrodata.entities;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
-import jakarta.websocket.Session;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -67,13 +67,17 @@ public class Event {
 
 
     // Table Relation
-    @OneToMany(mappedBy = "event", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "event", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private List<Session> sessions;
 
     @OneToMany(mappedBy = "event", fetch = FetchType.EAGER)
     private List<Participant> participants;
 
     @OneToMany(mappedBy = "event", fetch = FetchType.EAGER)
-    private List<Sponsor> sonpors;
+    private List<Sponsor> sponsors;
+
+    @OneToMany(mappedBy = "event", fetch = FetchType.EAGER)
+    private List<Room> rooms;
 
 }

@@ -17,6 +17,7 @@ public class SessionRoom {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+
     // Table Relation
     @ManyToOne
     @JoinColumn(name = "room_id", nullable = false)

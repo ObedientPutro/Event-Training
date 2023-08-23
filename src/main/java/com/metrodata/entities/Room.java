@@ -25,6 +25,7 @@ public class Room {
     @OneToMany(mappedBy = "room")
     private List<SessionRoom> sessionRooms;
 
+
     // Table Relation
     @ManyToOne
     @JoinColumn(name = "event_id", nullable = false)

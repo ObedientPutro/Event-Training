@@ -29,6 +29,7 @@ public class Speaker {
     @Column(length = 100, nullable = false)
     private String company;
 
+
     // Table Relation
     @ManyToOne
     @JoinColumn(name = "sponsor_id", nullable = false)

@@ -43,8 +43,9 @@ public class Participant {
     @Column(name = "is_feedback_sent", nullable = false)
     private Boolean isFeedbackSend = false;
 
+
     // Table Relation
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "event_id", nullable = false)
     private Event event;
 

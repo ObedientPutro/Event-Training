@@ -30,6 +30,7 @@ public class Sponsor {
     @Column(nullable = false)
     private SponsorCategory category;
 
+
     // Table Relation
     @OneToMany(mappedBy = "sponsor")
     private List<Speaker> speakers;

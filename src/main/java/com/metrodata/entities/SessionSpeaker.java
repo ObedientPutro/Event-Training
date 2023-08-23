@@ -17,6 +17,7 @@ public class SessionSpeaker {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+
     // Table Relation
     @ManyToOne
     @JoinColumn(name = "session_detail_id", nullable = false)

@@ -39,6 +39,7 @@ public class SessionRegistrant {
     @Column(name = "is_reminder_sent", nullable = false)
     private Boolean isReminderSent = false;
 
+
     // Table Relation
     @ManyToOne
     @JoinColumn(name = "participant_id", nullable = false)
