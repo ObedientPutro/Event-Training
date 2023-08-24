@@ -54,6 +54,9 @@ public class Event {
     private String location;
 
     @Column(columnDefinition = "TEXT", nullable = false)
+    private String overview;
+
+    @Column(columnDefinition = "TEXT", nullable = false)
     private String imageUrl;
 
     @Column(columnDefinition = "TEXT", nullable = false)
